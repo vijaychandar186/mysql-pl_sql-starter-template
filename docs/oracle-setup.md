@@ -54,14 +54,6 @@ Development container used by VS Code.
 * Git
 * Basic Linux tools
 
-### Workspace
-
-Mounted at:
-
-```
-/workspaces/<your-repo-name>
-```
-
 ---
 
 # 🔌 Connecting to Oracle
