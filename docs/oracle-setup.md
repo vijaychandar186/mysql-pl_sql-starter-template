@@ -59,7 +59,7 @@ Development container used by VS Code.
 Mounted at:
 
 ```
-/workspace
+/workspaces/<your-repo-name>
 ```
 
 ---

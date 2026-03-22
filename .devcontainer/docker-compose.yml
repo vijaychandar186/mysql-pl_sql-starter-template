@@ -3,15 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - ..:/workspace:cached
-    working_dir: /workspace
     command: sleep infinity
-    depends_on:
-      oracle:
-        condition: service_healthy
-      db:
-        condition: service_started
 
   oracle:
     image: gvenzl/oracle-xe:21
