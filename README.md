@@ -46,7 +46,7 @@ mysql -h db -u user -ppassword DB
 Connect to Oracle from inside the dev container:
 
 ```bash
-sqlplus user/password@//oracle:1521/XEPDB1
+sqlplus '"user"/"password"@//oracle:1521/XEPDB1'
 ```
 
 Use the helper script:
