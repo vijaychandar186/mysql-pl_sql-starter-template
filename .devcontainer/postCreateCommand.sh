@@ -23,8 +23,7 @@ for i in {1..60}; do
 done
 
 if [ "$mysql_ready" != "true" ]; then
-  echo "MySQL did not become ready in time."
-  exit 1
+  echo "Warning: MySQL did not become ready in time."
 fi
 
 echo "Waiting for Oracle to be ready..."
@@ -39,8 +38,11 @@ for i in {1..180}; do
 done
 
 if [ "$oracle_ready" != "true" ]; then
-  echo "Oracle did not become ready in time using ${ORACLE_USER}@//${ORACLE_HOST}:${ORACLE_PORT}/${ORACLE_SERVICE}."
-  exit 1
+  echo "Warning: Oracle did not become ready in time using ${ORACLE_USER}@//${ORACLE_HOST}:${ORACLE_PORT}/${ORACLE_SERVICE}."
 fi
 
-echo "All databases are ready!"
+if [ "$mysql_ready" = "true" ] && [ "$oracle_ready" = "true" ]; then
+  echo "All databases are ready!"
+else
+  echo "Container setup completed, but one or more database services still need attention."
+fi

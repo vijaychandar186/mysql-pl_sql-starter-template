@@ -19,6 +19,4 @@ RUN groupadd --gid $USER_GID $USERNAME \
 
 ENV PATH=/usr/lib/oracle/23/client64/bin:$PATH
 ENV LD_LIBRARY_PATH=/usr/lib/oracle/23/client64/lib
-
-WORKDIR /workspace
 USER $USERNAME

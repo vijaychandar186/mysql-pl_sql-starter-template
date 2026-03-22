@@ -2,7 +2,7 @@
   "name": "Oracle + MySQL",
   "dockerComposeFile": "docker-compose.yml",
   "service": "oracle-mysql",
-  "workspaceFolder": "/workspace",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "remoteUser": "user",
   "postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
   "forwardPorts": [1521, 3306, 8978],
