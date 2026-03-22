@@ -71,7 +71,7 @@ Mounted at:
 Use SQL*Plus:
 
 ```bash
-sqlplus user/password@//oracle:1521/XEPDB1
+sqlplus '"user"/"password"@//oracle:1521/XEPDB1'
 ```
 
 ---
